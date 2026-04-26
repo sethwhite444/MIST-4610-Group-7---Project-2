@@ -34,6 +34,19 @@ Interactive Element:
 - There is a multi-select filter featured on the siddebar that allows users to show data for Flanders, Wallonia, Brussels, or any combination of the three areas. This is analytically meaningful because the patterns of mortality significantly differed across Belgium's three regions, as Flanders recorded higher death totals consistently, due to its larger population and early care home outbreaks. Filtering these metrics by region lets users compare how each area was effected. 
 
 AI Assistance:
+
 - What was prompted: Claude was asked to build a Streamlit in Snowflake app that reproduced the two dashboard charts from Component 2, with a region multi-select filter as the interactive element.
+  
 - What Claude generated: The full Streamlit app structure including sidebar filter, SQL queries, chart configurations, and written interpretations. Initially used Plotly Express for charting
-- 
+
+- What was changed/rejected:
+1. The first version of the code used plotly.express, which threw a ModuleNotFoundError because Plotly is not pre-installed in Snowflake's Streamlit environment and there was no accessible Packages installer in the interface.
+2. Claude replaced Plotly with Altair, which comes pre-installed in Snowflake's Streamlit runtime, requiring no additional package installation
+3. The bar chart for Chart 2 was implemented using alt.Chart.mark_bar() with df.melt() to reshape the two metrics into a format Altair could plot side by side
+4. All SQL queries, filter logic, and interpretations from the original generated code were kept as-is with no modifications needed
+
+- What was accepted as-is
+1. Region multi-select sidebar filter
+2. Both SQL queries with dynamic region filtering
+3. Chart titles, axis labels, and written interpretations
+4. Overall app layout and structure
