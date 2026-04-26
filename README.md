@@ -18,7 +18,10 @@
 ## Analysis and Results
 Dashboard:
 <img width="1214" height="426" alt="Screenshot 2026-04-26 at 2 51 05 PM" src="https://github.com/user-attachments/assets/e61d6ba6-0d44-4c32-a4c8-47e9b82e2c37" />
-1. How did COVID-19 death tolls vary across age groups and regions in Belgium during the pandemic?
+1. How did COVID-19 death tolls vary across age groups and regions in Belgium during the pandemic? (Chart on Left)
 - This chart displays the monthly deaths from COVID-19 in Belgium, broken down by age group, spanning monthly from March 2020 to April 2023. Deaths are overwhelmingly intense among the older populations, with the 85+ group recording the highest mortality across all age groups, shortly followed by the 75-84 group, while those under the age of 64 remained closer to zero throughout the pandemic. The two most deadly periods were in Spring and Fall of 2020, and after which deaths fell substantially, which likely reflects Belgium’s rollout of the vaccination.
+
+2. How did the growth rate of COVID-19 cases relate to changes in mortality across Belgium over time? (Chart on Right)
+- This chart compares new COVID-19 cases against total deaths in Belgium from 2020 to 2023 on a monthly basis. The January to February 2022 Omicron wave led to Belgium’s largest surge in cases by far, exceeding over one million monthly cases, yet deaths would stay relatively low, which suggests immunity improvement and less severity of the pandemic. In contrast, the wave during Fall of 2020 shows a higher proportional relationship between cases and deaths, reflecting the higher fatality rate earlier in the pandemic, before vaccines were ready.
 
 ## Streamlit App
