@@ -25,3 +25,7 @@ Dashboard:
 - This chart compares new COVID-19 cases against total deaths in Belgium from 2020 to 2023 on a monthly basis. The January to February 2022 Omicron wave led to Belgium’s largest surge in cases by far, exceeding over one million monthly cases, yet deaths would stay relatively low, which suggests immunity improvement and less severity of the pandemic. In contrast, the wave during Fall of 2020 shows a higher proportional relationship between cases and deaths, reflecting the higher fatality rate earlier in the pandemic, before vaccines were ready.
 
 ## Streamlit App
+<img width="1812" height="1300" alt="image" src="https://github.com/user-attachments/assets/d3063d93-c1cb-44ce-8ea2-9af05710257f" />
+<img width="1774" height="320" alt="image" src="https://github.com/user-attachments/assets/4c65fb37-8e67-41c6-aaa0-ca702ea73e09" />
+<img width="1802" height="1294" alt="image" src="https://github.com/user-attachments/assets/ad744a6a-7d6e-4e3b-b0d0-2d9c7448a25d" />
+
