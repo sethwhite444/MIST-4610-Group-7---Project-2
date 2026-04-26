@@ -1,4 +1,4 @@
-# MIST-4610-Group-7 - Project-2
+# MIST-4610-Group-7 - Project 2
 
 ## Team Name:
 61608 - Group 7
