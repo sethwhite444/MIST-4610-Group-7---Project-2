@@ -29,3 +29,6 @@ Dashboard:
 <img width="1774" height="320" alt="image" src="https://github.com/user-attachments/assets/4c65fb37-8e67-41c6-aaa0-ca702ea73e09" />
 <img width="1802" height="1294" alt="image" src="https://github.com/user-attachments/assets/ad744a6a-7d6e-4e3b-b0d0-2d9c7448a25d" />
 
+Interactive Element:
+<img width="574" height="416" alt="image" src="https://github.com/user-attachments/assets/3754fcbe-ab88-482b-8e32-0c1f724d0a80" />
+- There is a multi-select filter featured on the siddebar that allows users to show data for Flanders, Wallonia, Brussels, or any combination of the three areas. This is analytically meaningful because the patterns of mortality significantly differed across Belgium's three regions, as Flanders recorded higher death totals consistently, due to its larger population and early care home outbreaks. Filtering these metrics by region lets users compare how each area was effected. 
