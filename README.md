@@ -32,3 +32,8 @@ Dashboard:
 Interactive Element:
 <img width="574" height="416" alt="image" src="https://github.com/user-attachments/assets/3754fcbe-ab88-482b-8e32-0c1f724d0a80" />
 - There is a multi-select filter featured on the siddebar that allows users to show data for Flanders, Wallonia, Brussels, or any combination of the three areas. This is analytically meaningful because the patterns of mortality significantly differed across Belgium's three regions, as Flanders recorded higher death totals consistently, due to its larger population and early care home outbreaks. Filtering these metrics by region lets users compare how each area was effected. 
+
+AI Assistance:
+- What was prompted: Claude was asked to build a Streamlit in Snowflake app that reproduced the two dashboard charts from Component 2, with a region multi-select filter as the interactive element.
+- What Claude generated: The full Streamlit app structure including sidebar filter, SQL queries, chart configurations, and written interpretations. Initially used Plotly Express for charting
+- 
