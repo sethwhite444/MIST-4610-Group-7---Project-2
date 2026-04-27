@@ -75,6 +75,7 @@ Why is this interesting / meaningful?
 This question is meaningful from an operational and public health perspective because it helps determine whether increases in COVID-19 cases led to increases in deaths, and how quickly those changes occurred. Understanding this relationship can provide insight into the severity of different waves of the pandemic and the effectiveness of interventions such as lockdowns or healthcare responses. It also helps evaluate how well systems handled rising case loads.
 
 ## Data Manipulations
+Query 1: 
 
 ## Analysis and Results
 Dashboard:
