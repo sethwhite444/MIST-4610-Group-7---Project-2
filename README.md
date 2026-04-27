@@ -20,10 +20,10 @@
 
 ## Questions and Justification
 Question 1: How did COVID-19 death tolls vary across age groups and regions in Belgium during the pandemic?
-Justification
+- Justification
 
 Question 2: How did the growth rate of COVID-19 cases relate to changes in mortality across Belgium over time?
-Justification
+- Justification
 
 ## Data Manipulations
 
