@@ -10,6 +10,13 @@
 5. Owen Verlander - [@owenver](https://github.com/owenver)
 
 ## Dataset Description
+- We selected the COVID-19 Epidemiological Data because it contains a wide range of real-world datasets from multiple sources such as Policy Measures from the CDC and Demographics from the Databank. Having multiple sources allows for a deeper multi-dimensional analysis of the data. This allows us to go beyond simple case tracking and analyze relationships between policy, behavior, healthcare capacity, and COVID outcomes.
+
+- However, we decided to focus on two tables SCS_BE_DETAILED_MORTALITY and JHU_COVID_19
+
+- The dataset contains 1 table with approximately 11,413 rows. Key columns include DATE (string, YYYY-MM-DD format) serving as the join key for time, REGION (string) as the geographic identifier mapping to country/state, AGEGROUP (string) enabling demographic breakdowns, SEX (string) for optional deeper breakdowns, and DEATHS (integer) acting as the numerator in mortality rate calculations.
+- JHU_COVID_19 has 9738292 rows and key columns include DATE (string, YYYY-MM-DD format) serving as the join key for time, COUNTRY_REGION (string) as the geographic identifier, CASE_TYPE (string) indicating the classification of cases such as confirmed or deaths, and CASES (integer) representing the count of cases.
+
 
 ## Questions and Justification
 
