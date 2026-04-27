@@ -45,22 +45,22 @@ What makes this question non-trivial?
 - Comparing over time and demographics; Analyze how mortality rates differs: across age groups, countries, time
 
 Why this is interesting / meaningful?
-This analysis goes beyond just tracking COVID_19 cases in general and instead examines who was most affected by the pandemic. By incorporating age groups we can see whether older populations experienced higher mortality rates, how risk was different between regions in Belgium, and how mortality patterns changed over time.
+This question is meaningful from a public health and social perspective because it identifies which age groups were most vulnerable to COVID-19. Understanding how mortality differs by age can help inform healthcare resource allocation, vaccination strategies, and policy decisions aimed at protecting high-risk populations. It also provides insight into the broader societal impact of the pandemic on different demographic groups.
 
 Question 2: How did the growth rate of COVID-19 cases relate to changes in mortality across Belgium over time?
 
 Which columns are relevant?
 
 From SCS_BE_DETAILED_MORTALITY
-- Date
+- Date - join key
 - Region - Belgium
-- Deaths
+- Deaths - deaths over time
 
 From JHU_COVID_19
-- Date
+- Date - used for time series analysis
 - Country region - belgium
-- Case type
-- Cases
+- Case type - filtered for "confirmed"
+- Cases - total case count
 - Difference - growth rate / new cases
 
 What makes this question non-trivial?
@@ -72,7 +72,7 @@ What makes this question non-trivial?
 - Comparing trends over time; Analyze spikes in case growth, corresponding changes in deaths
 
 Why is this interesting / meaningful?
-This analysis helps determine whether increases in COVID-19 cases led to death, and how quickly that relationship occured. This can reveal lag effects, differences in how Belgium handled outbreaks, and if rising cases always translated into higher mortality.
+This question is meaningful from an operational and public health perspective because it helps determine whether increases in COVID-19 cases led to increases in deaths, and how quickly those changes occurred. Understanding this relationship can provide insight into the severity of different waves of the pandemic and the effectiveness of interventions such as lockdowns or healthcare responses. It also helps evaluate how well systems handled rising case loads.
 
 ## Data Manipulations
 
