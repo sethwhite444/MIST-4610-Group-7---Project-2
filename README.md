@@ -22,11 +22,13 @@
 Question 1. How did COVID-19 mortality rates vary across age groups in Belgium over time?
 
 Which columns are relevant?
+
 From JHU_COVID_19
 - Date - allowing alignment of time between both datasets
 - Country region - Belgium
 - Case type - used to filter for “confirmed” cases (total cases)
 - Cases - used as a denominator in mortality rate
+
 From SCS_BE_DETAILED_MORTALITY
 - Date- join key for time
 - Region - Belgium
@@ -35,27 +37,25 @@ From SCS_BE_DETAILED_MORTALITY
 - Deaths - numerator in mortality rate
 
 What makes this question non-trivial?
-Filtering 
-- Filters JHU_COVID_19 by case type with confirmed cases
-Joining tables
-- Join on date
-- Join on geographic field (country region <> region) Belgium
-Aggregation 
-- Group by date, country region, age group
-Creating a new metric 
-- Calculating mortality rate; deaths / cases
-Comparing over time and demographics
-- Analyze how mortality rates differs: across age groups, countries, time
+
+- Filtering; Filters JHU_COVID_19 by case type with confirmed cases
+- Joining tables; Join on date, Join on geographic field (country region <> region) Belgium
+- Aggregation; Group by date, country region, age group
+- Creating a new metric; Calculating mortality rate; deaths / cases
+- Comparing over time and demographics; Analyze how mortality rates differs: across age groups, countries, time
 
 Why this is interesting / meaningful?
 This analysis goes beyond just tracking COVID_19 cases in general and instead examines who was most affected by the pandemic. By incorporating age groups we can see whether older populations experienced higher mortality rates, how risk was different between regions in Belgium, and how mortality patterns changed over time.
 
 Question 2: How did the growth rate of COVID-19 cases relate to changes in mortality across Belgium over time?
+
 Which columns are relevant?
+
 From SCS_BE_DETAILED_MORTALITY
 - Date
 - Region - Belgium
 - Deaths
+
 From JHU_COVID_19
 - Date
 - Country region - belgium
@@ -64,16 +64,12 @@ From JHU_COVID_19
 - Difference - growth rate / new cases
 
 What makes this question non-trivial?
-Filtering
-- Extract confirmed cases from case type
-Use a derived metric 
-- Use difference to measure case growth
-Joining tables
-- Join cases and deaths using date and geographic identifiers
-Aggregation 
-- Group by date and country
-Comparing trends over time
-- Analyze spikes in case growth, corresponding changes in deaths
+
+- Filtering; Extract confirmed cases from case type
+- Use a derived metric; Use difference to measure case growth
+- Joining tables; Join cases and deaths using date and geographic identifiers
+- Aggregation; Group by date and country
+- Comparing trends over time; Analyze spikes in case growth, corresponding changes in deaths
 
 Why is this interesting / meaningful?
 This analysis helps determine whether increases in COVID-19 cases led to death, and how quickly that relationship occured. This can reveal lag effects, differences in how Belgium handled outbreaks, and if rising cases always translated into higher mortality.
