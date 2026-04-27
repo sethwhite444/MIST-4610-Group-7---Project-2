@@ -14,7 +14,7 @@
 
 - However, we decided to focus on two tables SCS_BE_DETAILED_MORTALITY and JHU_COVID_19
 
-- The dataset contains 1 table with approximately 11,413 rows. Key columns include DATE (string, YYYY-MM-DD format) serving as the join key for time, REGION (string) as the geographic identifier mapping to country/state, AGEGROUP (string) enabling demographic breakdowns, SEX (string) for optional deeper breakdowns, and DEATHS (integer) acting as the numerator in mortality rate calculations.
+- SCS_BE_DETAILED_MORALITY contains 1 table with approximately 11,413 rows. Key columns include DATE (string, YYYY-MM-DD format) serving as the join key for time, REGION (string) as the geographic identifier mapping to country/state, AGEGROUP (string) enabling demographic breakdowns, SEX (string) for optional deeper breakdowns, and DEATHS (integer) acting as the numerator in mortality rate calculations.
 - JHU_COVID_19 has 9738292 rows and key columns include DATE (string, YYYY-MM-DD format) serving as the join key for time, COUNTRY_REGION (string) as the geographic identifier, CASE_TYPE (string) indicating the classification of cases such as confirmed or deaths, and CASES (integer) representing the count of cases.
 
 
