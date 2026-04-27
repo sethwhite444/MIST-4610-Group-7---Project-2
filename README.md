@@ -75,7 +75,31 @@ Why is this interesting / meaningful?
 This question is meaningful from an operational and public health perspective because it helps determine whether increases in COVID-19 cases led to increases in deaths, and how quickly those changes occurred. Understanding this relationship can provide insight into the severity of different waves of the pandemic and the effectiveness of interventions such as lockdowns or healthcare responses. It also helps evaluate how well systems handled rising case loads.
 
 ## Data Manipulations
-Query 1: 
+Query 1:
+<img width="624" height="218" alt="Screenshot 2026-04-27 at 3 12 57 PM" src="https://github.com/user-attachments/assets/32b55459-16e6-4be5-a8e5-762de42592b7" />
+
+What it does: This query pulls from the mortality table and aggregates total deaths by date, age group, and region. The SUM(DEATHS) collapses any duplicate or sub-grouped rows into a single death count per combination of those three fields.
+
+Why each piece matters:
+
+- WHERE AGEGROUP IS NOT NULL — filters out rows that lack an age group label, which would skew the demographic breakdown or create an unclassified category in the visualization
+- GROUP BY DATE, AGEGROUP, REGION — ensures deaths are bucketed at the right granularity for both the time series and the age group comparison
+- ORDER BY DATE — sorts chronologically so the data is ready for time series charting without additional transformation
+
+Why this is non-trivial: The raw mortality table contains multiple rows per date due to sex-level breakdowns (male/female). Without the aggregation, deaths would be double-counted in the chart. The SUM with the correct GROUP BY collapses those into a single meaningful total per age group per date.
+
+Query 2:
+<img width="668" height="361" alt="Screenshot 2026-04-27 at 3 13 58 PM" src="https://github.com/user-attachments/assets/67c0436e-05da-468e-a9e6-5573cf283f64" />
+What it does: This query joins the two tables on DATE to compare new COVID-19 case growth against total deaths in Belgium over time. It uses DIFFERENCE from the JHU table as a proxy for daily new cases, and aggregates deaths from the mortality table in a subquery before joining.
+
+Why each piece matters:
+
+- WHERE CASE_TYPE = 'Confirmed' — filters out death-type rows from the JHU table so only confirmed case counts are used, avoiding double-counting cases and deaths from the same table
+- WHERE DIFFERENCE >= 0 — removes negative values that appear due to retroactive data corrections in the JHU dataset, which would distort the case growth trend
+- LEFT JOIN with the subquery — pre-aggregates the mortality table by date before joining, which prevents row multiplication that would occur if you joined on the raw table directly
+- COALESCE(..., 0) — handles dates where Belgium has case data but no corresponding mortality record, replacing NULL with 0 so the chart renders cleanly
+
+Why this is non-trivial: This query requires a multi-table join across two datasets from different sources, a subquery to pre-aggregate deaths, geographic and case-type filtering, and data cleaning to handle negative difference values. Simply pulling from one table would not answer the question — the relationship between cases and deaths only emerges by combining both sources on a shared date key.
 
 ## Analysis and Results
 Dashboard:
